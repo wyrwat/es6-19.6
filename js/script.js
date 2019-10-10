@@ -13,6 +13,14 @@ class Stopwatch {
             miliseconds: 0
         };
     }
+
+    print() {
+        this.display.innerText = this.format(this.times);
+    }
+
+    format(times) {
+        return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(math.floor(times.miliseconds))}}`;
+    }
 }
 
 const stopwatch = new Stopwatch(
