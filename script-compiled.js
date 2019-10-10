@@ -39,7 +39,7 @@ var Stopwatch = function () {
             var _this = this;
 
             if (!this.running) {
-                this.runing = true;
+                this.running = true;
                 this.watch = setInterval(function () {
                     return _this.step();
                 }, 10);
@@ -71,6 +71,12 @@ var Stopwatch = function () {
             this.running = false;
             clearInterval(this.watch);
         }
+    }, {
+        key: 'resetWatch',
+        value: function resetWatch() {
+            this.reset();
+            this.print();
+        }
     }]);
 
     return Stopwatch;
@@ -86,6 +92,11 @@ startButton.addEventListener('click', function () {
 var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
     return stopwatch.stop();
+});
+
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', function () {
+    return stopwatch.resetWatch();
 });
 
 function pad0(value) {
