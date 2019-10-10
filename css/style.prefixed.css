@@ -1,0 +1,47 @@
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+body .controls {
+  font-size: 30px;
+  width: 200px;
+  margin: 20px auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+body .controls .button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  text-decoration: none;
+  color: black;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  background-color: orangered;
+  padding: 5px;
+}
+
+body .stopwatch {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 50px;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  background-color: orangered;
+  width: 200px;
+}
+/*# sourceMappingURL=style.prefixed.css.map */
