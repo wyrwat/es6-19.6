@@ -65,6 +65,12 @@ var Stopwatch = function () {
                 this.times.seconds = 0;
             }
         }
+    }, {
+        key: 'stop',
+        value: function stop() {
+            this.running = false;
+            clearInterval(this.watch);
+        }
     }]);
 
     return Stopwatch;

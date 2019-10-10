@@ -46,6 +46,11 @@ class Stopwatch {
             this.times.seconds = 0;
         }
     }   
+
+    stop() {
+        this.running = false;
+        clearInterval(this.watch);
+    }
 }
 
 const stopwatch = new Stopwatch(
