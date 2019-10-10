@@ -28,6 +28,12 @@ class Stopwatch {
             this.watch = setInterval(() => this.step(), 10);
         }
     }
+
+    step() {
+        if (!this.running) return;
+        this.calculate();
+        this.print();
+    }
 }
 
 const stopwatch = new Stopwatch(

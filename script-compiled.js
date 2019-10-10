@@ -45,6 +45,13 @@ var Stopwatch = function () {
                 }, 10);
             }
         }
+    }, {
+        key: 'step',
+        value: function step() {
+            if (!this.running) return;
+            this.calculate();
+            this.print();
+        }
     }]);
 
     return Stopwatch;
