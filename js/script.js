@@ -21,6 +21,13 @@ class Stopwatch {
     format(times) {
         return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
     }
+
+    start() {
+        if (!this.running) {
+            this.runing = true;
+            this.watch = setInterval(() => this.step(), 10);
+        }
+    }
 }
 
 const stopwatch = new Stopwatch(

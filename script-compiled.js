@@ -33,6 +33,18 @@ var Stopwatch = function () {
         value: function format(times) {
             return pad0(times.minutes) + ':' + pad0(times.seconds) + ':' + pad0(Math.floor(times.miliseconds));
         }
+    }, {
+        key: 'start',
+        value: function start() {
+            var _this = this;
+
+            if (!this.running) {
+                this.runing = true;
+                this.watch = setInterval(function () {
+                    return _this.step();
+                }, 10);
+            }
+        }
     }]);
 
     return Stopwatch;
