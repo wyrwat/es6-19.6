@@ -1,2 +1,2 @@
-# es6-19.6
+TIMER
 https://wyrwat.github.io/es6-19.6/
